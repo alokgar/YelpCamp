@@ -1,0 +1,11 @@
+                <h1>here are the details!</h1>
+                <h4> <%= campground.name %></h4>
+                <img src="<%= campground.image %>">
+                <h2><%= campground.description%></h2>
+                <a  class="btn btn-success" href="/campgrounds/<%=campground._id%>/comments/new">add new  comment</a>
+                <%  campground.comments.forEach(function(comment){  %>
+                        <p>
+                            <strong><%=comment.author %></strong>  - <%=comment.text %>
+                        </p>
+               <% }) %> 
+            
